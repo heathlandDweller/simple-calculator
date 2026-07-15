@@ -1,8 +1,29 @@
+let firstNum, secondNum;
+let isValid;
+
+isValid = false;
+while (!isValid) {
+    firstNum = Number(prompt("Enter the first number: "));
+    if (!isNaN(firstNum)) {
+        isValid = true;
+    } else {
+        console.log("Please enter a valid number.");
+    }
+}
+
+isValid = false;
+while (!isValid) {
+    secondNum = Number(prompt("Enter the second number: "));
+    if (!isNaN(secondNum)) {
+        isValid = true;
+    } else {
+        console.log("Please enter a valid number.");
+    }
+}
+
 function calculate(firstNum, secondNum, operator){
-    let add = Number(prompt("Enter the first number: "));
-    let subtract = Number(prompt("Enter the second number: "));
-    let multiply = Number(prompt("Enter the third number: "));
-    let divide = Number(prompt("Enter the fourth number: "));
+    
+    operator = prompt("Enter an operator (+, -, *, /): ");
 
     switch(operator){
         case '+': return add(firstNum, secondNum);
